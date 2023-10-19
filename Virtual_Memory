@@ -1,0 +1,36 @@
+Virtual Memory 
+
+Virtual memory is a memory management technique used in the modern computer system that provide an abstraction ont the computer's Physical memory RAM and extends beyond the avaible memory beyond the physical memeory RAM 
+Virtual memeory provides :
+1)Address space Abstraction 
+> Virtual memory provides processes with a uniform, contiguous address space that appears much larger than the physical RAM.
+> Each process operates in its own isolated virtual address space, simplifying memory management and ensuring that processes don't interfere with each other.
+> Virtual memory ensures that one process cannot directly access the memory of another process.
+> This memory protection mechanism enhances security and stability in multi-process or multi-user environments
+
+Use of the physical Memory 
+> Virtual memory allows the operating system to load only the necessary parts of a program or data into physical RAM, leaving the rest on disk.
+> This results in efficient utilization of physical memory and enables the running of larger applications than would be possible with physical RAM alone.
+
+
+Paging Memory 
+> Virtual memory typically uses a technique called memory paging, where memory is divided into fixed-size blocks called pages. When a program accesses a memory location, the operating system retrieves the corresponding page from disk and loads it into physical memory.
+
+> If there isn't enough free physical memory, less frequently used pages can be swapped out to disk.
+
+Problem of overheads and the fault tolenrance in the virtual Memory
+> If a program tries to access a portion of memory not currently in physical RAM (a page fault), the operating system can retrieve the required data from secondary storage (e.g., a hard drive or SSD). This fault tolerance prevents crashes due to running out of memory.
+
+
+Physical and Virual addresses of a process
+
+1) Physical addresess
+A physical address, also known as a real address, is the actual location of a memory cell in physical memory hardware (RAM). It is a binary number that specifies the exact location of data in physical memory.
+Physical addresses are used to identify the physical location of data in RAM chips. Every byte of data in RAM has a unique physical address.
+The CPU uses physical addresses to read from or write to specific locations in RAM.
+
+2)Virtual Address:
+
+A virtual address is an address used by a process or program to access memory. It is an abstract address that may not directly correspond to a physical location in memory.
+Virtual addresses are used to provide each process with its own isolated memory space, even if the physical RAM is limited.
+The operating system manages the mapping of virtual addresses to physical addresses, allowing multiple processes to run concurrently without interfering with each other.
