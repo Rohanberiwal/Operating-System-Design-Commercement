@@ -1,0 +1,30 @@
+A page fault algorithm is used in virtual memory systems to determine which page in physical memory to evict when there is no available free space and a page fault occurs. Page faults happen when a process tries to access a page that is not currently in physical memory. Several algorithms are used to decide which page to replace when a page fault occurs. Some common page replacement algorithms include:
+
+Optimal (Belady's Algorithm):
+
+This theoretical algorithm selects the page for replacement that will be accessed furthest in the future. It provides the lowest page fault rate but is not practical because it requires knowledge of the future memory access patterns, which is not available in real systems.
+FIFO (First-In-First-Out):
+
+The oldest page in memory is the one replaced. This is easy to implement but does not always perform well, as it doesn't consider the access history of pages.
+LRU (Least Recently Used):
+
+The page that hasn't been accessed for the longest time is replaced. This algorithm requires maintaining a record of the order in which pages were accessed, which can be implemented using a queue, stack, or other data structures.
+LFU (Least Frequently Used):
+
+The page that has been accessed the least frequently is replaced. This algorithm keeps track of how often each page is accessed.
+Second Chance (Clock):
+
+This is a variation of the FIFO algorithm. It gives pages a "second chance" before being replaced, considering whether they have been accessed since they were loaded.
+NUR (Not Used Recently):
+
+This algorithm tracks whether pages have been recently used and whether they have been modified. It uses this information to select pages for replacement.
+MFU (Most Frequently Used):
+
+The page that has been accessed the most frequently is replaced. This algorithm keeps track of how often each page is accessed.
+Random Replacement:
+
+Pages are chosen for replacement randomly. This algorithm is simple but may not perform optimally.
+Clock-Pro:
+
+This is a modified version of the Second Chance algorithm that considers the "use" and "modify" bits in the page table entry.
+The choice of page replacement algorithm depends on system requirements and performance characteristics. Each algorithm has its own trade-offs in terms of complexity and the ability to adapt to different memory access patterns. Systems may use a combination of algorithms or employ more advanced techniques to optimize page replacement.
