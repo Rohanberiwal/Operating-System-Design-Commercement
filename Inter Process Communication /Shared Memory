@@ -1,0 +1,34 @@
+Shared memory is a form of inter-process communication (IPC) that allows multiple
+processes to share a region of memory. In a shared memory system, several processes 
+can access and modify the same data structure concurrently. This shared region of memory is
+typically created and managed by the operating system.
+
+Here are the key characteristics and concepts associated with shared memory:
+
+Memory Region:
+
+Shared memory involves the establishment of a region in the address space that is shared among
+multiple processes. This region is typically a block of physical memory that can be directly accessed by all participating processes.
+Communication:
+
+Processes can communicate with each other by reading from and writing to the shared memory region. 
+This allows for fast and efficient communication, as processes can communicate without the need for explicit message passing.
+Synchronization:
+
+Since multiple processes can access the shared memory concurrently, synchronization mechanisms such as 
+locks, semaphores, or other coordination tools are often required to ensure that data is accessed and modified in a controlled and predictable manner.
+Advantages:
+
+Shared memory is advantageous for certain types of parallel computing tasks because it provides a fast and direct means of
+communication between processes. It is especially useful when multiple processes need to collaborate on a shared task and exchange data frequently.
+Disadvantages:
+
+One challenge with shared memory systems is managing concurrent access to the shared region to prevent race
+conditions and ensure data consistency. Proper synchronization mechanisms are essential to avoid conflicts.
+Operating System Support:
+
+Most modern operating systems provide support for shared memory, offering APIs and system calls that allow processes to create and manage shared memory regions.
+Examples:
+
+Shared memory is commonly used in parallel computing environments, multi-threaded applications, and 
+various inter-process communication scenarios. It is employed in systems ranging from high-performance computing clusters to multi-core processors on a single machine.
