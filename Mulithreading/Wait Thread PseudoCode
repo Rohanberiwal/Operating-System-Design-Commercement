@@ -1,0 +1,11 @@
+//Suspend execution of calling thread until thread
+//terminates
+int pthread_join(
+//identifier of thread to wait for
+
+pthread_t thread,
+
+//terminating thread’s status (NULL to ignore)
+
+void **status
+) //returns error status
