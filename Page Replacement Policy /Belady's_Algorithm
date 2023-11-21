@@ -1,0 +1,23 @@
+Belady's Algorithm," is an idealized page replacement 
+algorithm used for benchmarking other algorithms. It makes the best 
+possible decisions by replacing the page that will not be used for the longest period in the future. 
+While OPT is impractical for actual implementation due to its requirement for future knowledge, 
+it provides a theoretical upper bound for the performance of page replacement algorithms.
+
+Here's how the Optimal Page Replacement Algorithm works:
+
+Future Page Reference Prediction:
+
+OPT assumes perfect knowledge of future page references.
+
+Page Request:
+
+When a page fault occurs, and a new page needs to be brought into a frame, 
+the algorithm looks into the future and selects the page that will not be used for the longest period.
+Page Replacement:
+
+If all frames are occupied, the algorithm selects the page in memory that has 
+the longest time until it is next referenced and replaces it with the new page.
+Optimality:
+
+The OPT algorithm always selects the optimal page replacement, minimizing the number of future page faults.
