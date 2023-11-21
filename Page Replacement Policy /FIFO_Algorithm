@@ -22,3 +22,7 @@ the end of the queue (indicating it is the most recently brought in).
 Repeat:
 
 Repeat this process for subsequent page references.
+FIFO is simple to implement but may not perform well in scenarios 
+where the page access pattern is not well-suited to its assumptions. 
+It can suffer from the "Belady's Anomaly" problem, where increasing the number of 
+frames may actually increase the number of page faults.
