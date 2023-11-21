@@ -1,0 +1,24 @@
+FIFO, 
+which stands for First-In-First-Out, 
+is one of the simplest and most straightforward page
+replacement algorithms used in operating systems for memory management.
+
+Page Frame Queue:
+
+Maintain a queue of page frames in memory.
+Page Request:
+
+When a page is referenced, check if it is already in a page frame.
+If the page is in a frame, there is a page hit, and no further action is needed.
+If the page is not in a frame (a page fault), proceed to the next step.
+Page Replacement:
+
+If a page fault occurs and there is space available in the memory frames, bring the requested page into an available frame.
+If there is no space (all frames are occupied), replace the page in the frame that has been in memory the longest.
+Update Queue:
+
+After a page is replaced, update the page frame queue by moving the replaced page to 
+the end of the queue (indicating it is the most recently brought in).
+Repeat:
+
+Repeat this process for subsequent page references.
