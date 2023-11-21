@@ -1,0 +1,16 @@
+//Asynchronously invoke func in a new thread
+int pthread_create(
+
+//returned identifier for the new thread
+pthread_t *thread,
+//specifies the size of thread’s stack and
+//how the thread should be scheduled by OS
+const pthread_attr_t *attr,
+
+//routine executed after creation
+void *(*func)(void *),
+
+//a single argument passed to func
+
+void *arg
+) //returns error status
