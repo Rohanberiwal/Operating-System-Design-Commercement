@@ -1,0 +1,27 @@
+1:1 thread model Multithreading
+
+Each Thread Maps to a Single Kernel-Level Thread:
+
+Every user-level thread (a thread managed by the application or user) corresponds 
+to exactly one kernel-level thread (a thread managed by the operating system).
+User Threads Are Directly Mapped to Kernel Threads:
+
+The user threads created by the application directly correspond to kernel threads. 
+This means that the operating system schedules and manages each user thread as if it were a separate process.
+Advantages:
+
+This model allows for parallelism, as multiple threads can execute concurrently on multiple processors if available.
+It provides better concurrency and parallelism because the operating system can schedule 
+multiple threads to run simultaneously on different processors.
+Disadvantages:
+
+Thread creation, termination, and synchronization operations may be more heavyweight since they involve kernel-level operations.
+This model might lead to higher overhead in terms of system resources, especially in 
+scenarios where a large number of threads are created.
+Examples:
+
+Pthreads (POSIX Threads) on Unix-like systems, Win32 threads on Windows, and Java threads using the
+native thread implementation are examples of threading libraries and APIs that often follow a 1:1 thread model.
+It's worth noting that there are alternative threading models, such as the many-to-many (M:N) model,
+where multiple user-level threads are mapped to a smaller or equal number of kernel threads, allowing for more 
+flexibility and potentially reduced overhead.
