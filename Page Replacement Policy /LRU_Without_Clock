@@ -1,0 +1,23 @@
+The Least Recently Used (LRU) page replacement algorithm is a commonly used
+algorithm that aims to keep track of the order in which pages are accessed and 
+selects the page for replacement that hasn't been used for the longest period of time. 
+There are different implementations of LRU, but one straightforward approach is to use a counter or
+a timestamp to record the time of the last access for each page.
+
+Here's a simplified explanation of the LRU page replacement algorithm:
+
+Initialization:
+
+Assign a counter or timestamp to each page when it is brought into memory.
+Page Access:
+
+When a page is referenced, update its counter or timestamp to the current time.
+Page Replacement:
+
+When a page fault occurs and a new page needs to be brought into a frame, select the 
+page with the oldest counter or the earliest timestamp for replacement.
+Repeat:
+
+Continue this process for subsequent page references.
+The goal is to keep track of the recency of page accesses and prioritize retaining
+pages that have been used more recently. This helps to minimize the number of page faults.
