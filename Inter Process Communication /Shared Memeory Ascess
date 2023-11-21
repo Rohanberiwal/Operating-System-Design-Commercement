@@ -1,0 +1,25 @@
+User Mode:
+
+In user mode, processes can have direct access to shared memory without requiring kernel 
+intervention for every memory access. This is often facilitated by memory-mapping techniques or 
+specific system calls that allow user-level processes to map a shared memory segment directly into their virtual address space.
+Once the memory is mapped, processes can read from and write to the shared memory region without needing 
+to switch to kernel mode for each access. This provides a more efficient and direct means of communication between user-level processes.
+However, user-mode access to shared memory may lack certain protections, and careful synchronization
+mechanisms are necessary to avoid race conditions and ensure data consistency.
+Kernel Mode:
+
+In some implementations, especially when using traditional system calls for shared memory management, 
+accessing shared memory may involve kernel mode operations.
+Processes typically use system calls (e.g., shmget, shmat, etc.) to request the creation or attachment of a shared memory segment. 
+These system calls involve transitioning from user mode to kernel mode to perform operations that require privileged access.
+Kernel mode involvement might also be necessary for managing the shared memory segment's metadata, 
+such as tracking which processes have attached to it and enforcing security policies.
+Hybrid Approaches:
+
+Some systems may use hybrid approaches, where the initial setup and management of shared memory 
+involve kernel-mode operations, but the actual data transfer and access occur in user mode once the shared memory segment is established.
+Example (Linux):
+
+In Linux, the mmap system call can be used for memory mapping, allowing user processes to directly access shared memory. 
+The initial setup may involve other system calls like shmget, which operates in kernel mode.
