@@ -1,0 +1,37 @@
+ Inter-Process Communication (IPC) mechanism to facilitate communication
+between processes and between user space and kernel space. The reason is that 
+processes run in separate user spaces, and the kernel space is privileged and restricted.
+
+Here are a few reasons why IPC mechanisms are necessary:
+
+User Space Isolation:
+
+Processes are isolated from each other in user space for security and stability reasons.
+They cannot directly access each other's memory. Therefore, if processes need to communicate or share data, 
+an IPC mechanism is required.
+Accessing Kernel Services:
+
+Processes need a way to access services provided by the operating system in the kernel space. 
+This is typically done through system calls, which act as a form of IPC. For example, when a 
+process wants to perform file I/O or allocate memory, it makes a system call to request the kernel's services.
+Communication Between Processes:
+
+Processes may need to communicate with each other, exchange data, or synchronize their activities. 
+IPC mechanisms provide a standardized way for processes to communicate.
+Common IPC mechanisms include:
+
+Message Passing: Processes send and receive messages through a messaging system provided by the operating system. 
+This can be implemented using various techniques, such as sockets, message queues, or pipes.
+
+Shared Memory: Processes can establish a shared memory region, allowing them to read and write data
+in a common memory space. Synchronization mechanisms like semaphores or mutexes are often used with 
+shared memory to avoid race conditions.
+
+Synchronization Primitives: Kernel space provides synchronization primitives like semaphores, mutexes, 
+and condition variables that processes can use to coordinate their activities.
+
+Signals: Processes can use signals to notify each other of events or request specific actions.
+This is a simple form of IPC used for process-to-process communication.
+
+In summary, even though the kernel space is shared, IPC mechanisms are essential for processes to
+communicate, access kernel services, and coordinate their activities in a controlled and secure manner.
