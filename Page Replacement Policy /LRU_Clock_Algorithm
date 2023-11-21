@@ -1,0 +1,26 @@
+LRU (Least Recently Used):
+
+LRU is a caching algorithm that keeps track of the order in which elements are accessed. 
+The idea is to evict the least recently used element when the cache is full.
+This is based on the assumption that recently used elements are more likely to be used again soon.
+Clock Algorithm:
+
+The Clock algorithm is a page replacement algorithm used in operating systems. 
+It uses a circular list (or array) of page frames, and each page frame has an associated "use" bit. 
+The algorithm scans through the pages in a circular manner, and when a page needs to be replaced,
+ it looks for the first page with the "use" bit not set (0). If all bits are set, it makes a second pass, setting the bits to 0 until it finds a page to replacement .
+Use a Circular List:
+
+Like the Clock algorithm, maintain a circular list of page frames.
+Maintain Recency Information:
+
+Track the recency of access for each page, similar to LRU. This could involve maintaining a timestamp or a counter for each page.
+
+Page Replacement:
+
+When a page needs to be replaced, use a combination of Clock's circular scanning and LRU's recency information to make the decision.
+Scan through the circular list, checking both the "use" bit (Clock) and the recency information.
+Identify a candidate page that is both not recently used (use bit not set) and not recently accessed (according to LRU criteria).
+Update Information:
+
+Update the recency information for the accessed page.
