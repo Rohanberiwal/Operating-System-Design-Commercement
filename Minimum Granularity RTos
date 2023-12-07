@@ -1,0 +1,30 @@
+ "Minimum Granularity for Scheduling Latency" in the context of real-time 
+systems refers to the smallest unit of time within which a scheduling decision can be made.
+Scheduling latency is the time it takes for a system to respond to an external event or interrupt by making a scheduling decision and dispatching a task.
+
+Here are key points related to Constraint 2 - Minimum Granularity for Scheduling Latency:
+
+1. Definition:
+The minimum granularity for scheduling latency represents the smallest time interval that the real-time operating system can use for making scheduling decisions.
+2. Impact on Real-Time Systems:
+In real-time systems, meeting deadlines is crucial. A low minimum granularity allows the system to respond quickly
+to events and reduces the time between an event occurrence and the execution of the corresponding task.
+3. Trade-offs:
+Achieving a very low granularity may lead to increased overhead, as the scheduler needs to make frequent decisions. 
+This can impact overall system performance, especially in terms of context-switching overhead.
+4. Hardware and Software Considerations:
+The minimum granularity is influenced by both hardware and software factors. Hardware capabilities, such as clock precision,
+play a role, as do the design choices made in the real-time operating system.
+5. Determining the Value:
+The value for the minimum granularity is often determined based on the specific requirements of the real-time application.
+Some applications may require very fine-grained scheduling to meet stringent deadlines, while others can tolerate coarser granularities.
+6. Adaptability:
+Real-time systems may need to adapt their scheduling granularity based on the dynamic requirements of the tasks and the nature of the workload.
+7. Examples:
+For example, if a real-time system has a minimum granularity of 1 millisecond, it means that the system can make scheduling 
+decisions and dispatch tasks with a resolution of 1 millisecond.
+8. RTOS Configuration:
+Real-time operating systems often provide configuration options for setting the scheduling granularity. System designers need 
+to carefully choose this value based on the specific needs of the application.
+9. Compliance with Standards:
+Depending on the industry and application domain, there may be standards or guidelines that specify the acceptable minimum granularity for scheduling latency.
