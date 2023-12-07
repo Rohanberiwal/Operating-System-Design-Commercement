@@ -1,0 +1,36 @@
+"CPU polling," it generally refers to a technique used in computer systems for managing input/output (I/O) operations. Here's an explanation:
+
+CPU Polling in I/O Operations:
+Definition:
+
+CPU polling is a method where the CPU repeatedly checks the status of an I/O device to determine if it is ready for data transfer or other operations.
+Operation:
+
+Instead of relying on interrupts to notify the CPU when an I/O operation is complete, the CPU actively polls the I/O devices at regular intervals.
+Polling Loop:
+
+A polling loop is implemented in software, where the CPU checks the status register of the I/O device to see if it is ready.
+Busy Waiting:
+
+During the polling period, the CPU is effectively in a state of "busy waiting," continuously checking the device status without performing other tasks.
+Advantages:
+
+Simplicity: CPU polling is straightforward to implement and may be suitable for simple systems with limited hardware support for interrupts.
+Disadvantages:
+
+Inefficiency: Continuous polling can lead to inefficient use of CPU resources, especially if the CPU spends a significant amount of time waiting for I/O operations to complete.
+
+Increased Power Consumption: Continuous polling may result in increased power consumption compared to interrupt-driven approaches.
+
+Scalability: As the system becomes more complex or the number of I/O devices increases, the inefficiencies of polling become more apparent.
+
+Alternatives: Interrupt-driven I/O:
+Interrupts:
+
+In modern systems, interrupt-driven I/O is more common. In this approach, the CPU is interrupted when an I/O device is ready, allowing it to perform other tasks until the interrupt occurs.
+Efficiency:
+
+Interrupt-driven I/O tends to be more efficient as it allows the CPU to be productive and responsive to other tasks instead of continuously polling.
+Resource Utilization:
+
+It is more suitable for systems where efficient resource utilization and responsiveness are critical.
