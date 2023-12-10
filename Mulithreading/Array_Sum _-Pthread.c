@@ -1,6 +1,7 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+//
 int A[SIZE]; // Initialization code elided
 int array_sum(int low, int high) {
 int sum = 0;
